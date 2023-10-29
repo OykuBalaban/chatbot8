@@ -2,35 +2,27 @@ version: "3.1"
 
 stories:
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
 
 
 - story: merch
   steps:
     - intent: merch
     - action: utter_merch
+    - intent: merch_one
+    - action: utter_merch_one
+    - intent: merch_two
+    - action: utter_merch_two
+    - intent: merch_three
+    - action: utter_merch_three
+    - intent: merch_four
+    - action: utter_merch_four
+    - intent: merch_five
+    - action: utter_merch_five
+
+
+- story: health
+  steps:
+    - intent: health
+    - action: utter_health
+    - intent: affirm
+    - action: utter_health_more

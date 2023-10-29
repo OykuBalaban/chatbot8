@@ -1,14 +1,24 @@
 version: "3.1"
 
 intents:
-  - greet
+  - greet_name
   - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
   - merch
+  - merch_one
+  - merch_two
+  - merch_three
+  - merch_four
+  - merch_five
+  - health
+  - affirm
+  - reject
+  - health_more
+
+entities:
+  - person
+
+actions:
+  - action_person
 
 responses:
   utter_greet:
@@ -31,7 +41,39 @@ responses:
   - text: "I am a bot, powered by Rasa."
 
   utter_merch:
-    - text: 'You can see the merchandise here! https://webshop.th-deg.de/merchandise/'
+    - text: 'Sure! Which merchandise catalog would you like to see?    
+    1 = Textiles
+    2 = Stationary
+    3 = Jugs,cups and more
+    4 = Various Products
+    5 = All the products'
+
+  utter_merch_one:
+    - text: 'Of course here is the link of the textiles https://webshop.th-deg.de/en/merchandise/textiles/'
+
+  utter_merch_two:
+    - text: 'Of course here is the link of the stationary https://webshop.th-deg.de/en/merchandise/stationary/'
+
+  utter_merch_three:
+    - text: 'Of course here is the link of jugs,cups and more https://webshop.th-deg.de/en/merchandise/jugs-cups-more/'
+
+  utter_merch_four:
+    - text: 'Of course here is the link of various products https://webshop.th-deg.de/en/merchandise/various-products/'
+
+  utter_merch_five:
+     - text: 'Of course here is the link of all the products https://webshop.th-deg.de/en/'
+
+
+
+  utter_health:
+    - text: "Sure! here is the link of University's health and well-being center https://www.th-deg.de/en/dit/health-wellbeing  , would you like to learn how to contact?"
+
+  utter_health_more:
+    - text: "Okay! here is the contact information :  gesunde-hochschule@th-deg.de (Carolin Stadler / Laura Nowak)   "
+
+
+
+
 
 session_config:
   session_expiration_time: 60
